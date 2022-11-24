@@ -16,7 +16,7 @@ jobs:
         with:
           database_url: ${{ secrets.DB_SECRET }}
           path: "backup.sql" 
-          options: "-O"
+          options: "-O -N supabase_functions"
           
       - name: Pushes Dumped Backup
         uses: dmnemec/copy_file_to_another_repo_action@main
